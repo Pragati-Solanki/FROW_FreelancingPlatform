@@ -1,0 +1,14 @@
+Freelancing Website Page Structure
+
+ 	Page Name	    File Name	  Description
+
+1	Home	                   Homepage.html	  Home page with intro and CTAs
+2	Explore    	    explore.html	  Discover trending freelancers, jobs, and categories
+3	Find Freelancers	    freelancers.html	  Search + profile view in one page
+4	Find Jobs                    jobs.html	  Post jobs + browse listings + view job details
+5	Saved	                   saved.html	  Bookmarked jobs and freelancers
+6	Login / Register    	    log.html	  Combined login/register with toggles or tabs
+7	Dashboard	    dashboard.html	  User panel with posted/applied jobs, profile
+8	Settings	                   settings.html	  Appearance, theme, preferences
+9	About + Contact	    info.html 	  Platform story and contact form (merged)
+10	Help / FAQ	    help.html	  Guidance and support content
