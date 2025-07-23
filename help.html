@@ -64,20 +64,37 @@ body {
       background-color: rgba(217, 236, 255, 0.561);
       font-size: 18;
       margin: 1dvh;
+      height: 50px;
 }
 
 /* pop up */
+
+.pop{
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+  background-color: rgba(217, 236, 255, 0.561);
+  padding:10px;
+  font-size: 15;
+  margin: 1dvh;
+}
 #popup {
       display: none;
       position: fixed;
-      top: 30%;
+      top: 40%;
       left: 50%;
       transform: translate(-50%, -30%);
-      background: rgba(255, 255, 255, 0.438);
+      background: rgba(255, 255, 255, 0.555);
       border: 2px solid #000;
       padding: 20px;
       z-index: 1000;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+#popupOverlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
     }
 </style>
 </head>
@@ -100,14 +117,15 @@ body {
 </center><hr>
 <br><br><br><br>
 
-  <div>
-    <div class="Q">
-    Q: abcd abcd abcd abcd
+<button class="pop" id="popupBtn">Open Popup</button>
+<div id="popupOverlay"></div>
+  <div id="popup">
+    <p>This is a popup message. Click outside or press close to dismiss.</p>
+    <center>
+    <button id="closePopup">Close</button>
+    </center>
   </div>
-  <div class="A">
-    A: abcd abcd abcd abcd
-  </div>
-  <br>
+<br>
 <br>
   </div>
   <div>
@@ -150,18 +168,8 @@ body {
   <br>
 <br>
   </div>
-  <div>
-    <div class="Q">
-    Q: abcd abcd abcd abcd
-  </div>
-  <div class="A">
-    A: abcd abcd abcd abcd
-  </div>
-  <br>
-<br>
-  </div>
 
-
+ 
 
 <br><br>
 <small><center>
@@ -180,6 +188,26 @@ q.addEventListener("click", () => {
         answer.style.display = answer.style.display === "block" ? "none" : "block";
       });
     });
+    // Pop Up
+     const popupBtn = document.getElementById("popupBtn");
+     const popup = document.getElementById("popup");
+    const popupOverlay = document.getElementById("popupOverlay");
+    const closePopup = document.getElementById("closePopup");
+
+      popupBtn.onclick = () => {
+      popup.style.display = "block";
+      popupOverlay.style.display = "block";
+
+     closePopup.onclick = () => {
+      popup.style.display = "none";
+      popupOverlay.style.display = "none";
+    };
+
+      popupOverlay.onclick = () => {
+      popup.style.display = "none";
+      popupOverlay.style.display = "none";
+    };
+    };
 </script>
 
 
