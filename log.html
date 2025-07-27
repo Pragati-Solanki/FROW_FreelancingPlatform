@@ -112,7 +112,7 @@ input[type=text]:focus, input[type=password]:focus {
   <p class="title">Our User</p><br><br><br>
 
   <div class="Log_In">
-  <form class="login">
+  <form class="login" onsubmit="validateSignupForm(event)">
   <label>Username:</label><br>
   <input type="text" placeholder="Username" name="username" required><br>
   <label>Email:</label><br>
@@ -135,7 +135,7 @@ input[type=text]:focus, input[type=password]:focus {
   <h1>SignUp</h1>
   <p class="title">New User</p><br>
   <div class="Sign_Up">
-  <form class="sign">
+  <form class="sign" onsubmit="validateSignupForm(event)">
   <label for="Username">Username:</label><br>
   <input type="text" placeholder="Username" name="username" required><br>
   <label>Email:</label><br>
@@ -162,5 +162,17 @@ input[type=text]:focus, input[type=password]:focus {
 <font> contact us | </font>
 <font> help/FAQ </font>
 </center></small>
+
+<script>
+function validateSignupForm(event) {
+  event.preventDefault(); // Prevent form submission for validation
+
+  const form = document.querySelector('.sign');
+  const username = form.username.value.trim();
+  const email = form.email.value.trim();
+  const password = form.pswd.value;
+  const confirmPassword = form["pswd-re"].value;
+  
+</script>
 </body>
 </html>
