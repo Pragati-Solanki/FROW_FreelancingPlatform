@@ -172,7 +172,14 @@ function validateSignupForm(event) {
   const email = form.email.value.trim();
   const password = form.pswd.value;
   const confirmPassword = form["pswd-re"].value;
+
+  // regular expressions 
+  const nameRegex = /^[A-Za-z ]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+
   
+
 </script>
 </body>
 </html>
