@@ -164,7 +164,8 @@ input[type=text]:focus, input[type=password]:focus {
 </center></small>
 
 <script>
-function validateSignupForm(event) {
+function validateSignupForm(event) 
+{
   event.preventDefault(); // Prevent form submission for validation
 
   const form = document.querySelector('.sign');
@@ -177,8 +178,30 @@ function validateSignupForm(event) {
   const nameRegex = /^[A-Za-z ]+$/;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
-
   
+   if (!nameRegex.test(username)) {
+    alert("Username should contain only letters and spaces.");
+    return false;
+  }
+
+  if (!emailRegex.test(email)) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
+
+  if (!passwordRegex.test(password)) {
+    alert("Password must be at least 6 characters long and contain at least one letter and one number.");
+    return false;
+  }
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match.");
+    return false;
+  }
+
+  alert("Registration successful!");
+  form.submit(); // Submit if all validations pass
+}
 
 </script>
 </body>
