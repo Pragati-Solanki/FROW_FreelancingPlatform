@@ -144,8 +144,9 @@ border-right-color: #f5f8d5;
 border: 0;
 padding: 0;
 }
+
 .text{
-  background-color: #c5ffd1;
+  background-color:#c5ffd1;
   color:#000000;
   width: 1300px;
   height: 240px;
@@ -186,6 +187,15 @@ body {
 </form></div>
 
 </center>
+
+  <div class="container">
+    <h2>Events</h2>
+    <div id="events"></div>
+
+    <h2>Client Profiles</h2>
+    <div id="client"></div>
+  </div>
+
 <br><br><br><br><br><br><br><br><br><br><br><br>
 <small><center>
 <font> Explore new oppurtunities, build your skills <br> Grow Your Experience </font><hr>
@@ -195,4 +205,49 @@ body {
 </center></small>
 
 </body>
+<script>
+
+// Sample JSON data (could be fetched from server or file)
+const eventJSON = `[
+  {"work": "Teacher", "subject": "DSA", "time": "12hr"},
+  {"work": "Teacher", "subject": "WDF", "time": "8hr"}
+]`;
+
+const clientJSON = `[
+  {"name": "A", "id": 21, "branch": "Computer Science"},
+  {"name": "B", "id": 22, "branch": "Electronics"}
+]`;
+
+// Parse JSON strings
+const events = JSON.parse(eventJSON);
+const students = JSON.parse(studentJSON);
+
+// Display Events
+const eventContainer = document.getElementById("events");
+events.forEach(event => {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `
+    <strong>Work:</strong> ${event.work}<br>
+    <strong>Subject:</strong> ${event.subject}<br>
+    <strong>Time:</strong> ${event.time}
+  `;
+  eventContainer.appendChild(card);
+});
+
+// Display Students
+const studentContainer = document.getElementById("client");
+client.forEach(client => {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `
+    <strong>Name:</strong> ${client.name}<br>
+    <strong>ID:</strong> ${client.id}<br>
+    <strong>Batch:</strong> ${client.branch}
+  `;
+  studentContainer.appendChild(card);
+});
+
+
+</script>
 </html>
