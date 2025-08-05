@@ -193,7 +193,7 @@ body {
     <div id="events"></div>
 
     <h2>Client Profiles</h2>
-    <div id="client"></div>
+    <div id="clients"></div>
   </div>
 
 <br><br><br><br><br><br><br><br><br><br><br><br>
@@ -220,7 +220,7 @@ const clientJSON = `[
 
 // Parse JSON strings
 const events = JSON.parse(eventJSON);
-const students = JSON.parse(studentJSON);
+const clients = JSON.parse(clientJSON);
 
 // Display Events
 const eventContainer = document.getElementById("events");
@@ -236,8 +236,8 @@ events.forEach(event => {
 });
 
 // Display Students
-const studentContainer = document.getElementById("client");
-client.forEach(client => {
+const clientContainer = document.getElementById("clients");
+clients.forEach(client => {
   const card = document.createElement("div");
   card.className = "card";
   card.innerHTML = `
@@ -245,7 +245,7 @@ client.forEach(client => {
     <strong>ID:</strong> ${client.id}<br>
     <strong>Batch:</strong> ${client.branch}
   `;
-  studentContainer.appendChild(card);
+  clientContainer.appendChild(card);
 });
 
 
