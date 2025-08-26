@@ -1,138 +1,150 @@
 <html>
+
 <head>
-<title> Settings</title>
-<style>
-a:link {
-  color: rgb(0, 0, 0);
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: rgb(0, 0, 0);
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  color: rgb(255, 255, 255);
-  background-color: transparent;
-}
-
-.button {
-  background-color: white;
-  color: black;
-  border: 2px solid #059b8c;
-  padding: 15px 32px;
-  border-radius: 4px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  opacity: 0.7;
-  font-size: 12px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-.button:hover{
-    background-color: rgb(103, 21, 117);
-    color: #ffffff ;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    opacity: 1;
-}
-
-body{
- background-image: url("bg1.jpg");
- background-size: 1350px 1300px;
- background-color: rgb(163, 179, 180);}
-
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  transition: background 0.2s linear;
-}
-
-body.dark {background-color: #292c35;} 
-
-body.dark h1, body.dark .support a {color: #fff;}
-
-.checkbox {
-  opacity: 0;
-}
-
-.checkbox-label {
-  background-color: #111;
-  width: 40px;
-  height: 18px;
-  border-radius: 50px;
-  position: relative;
-  padding: 5px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.fa-moon {color: #f1c40f;}
-
-.fa-sun {color: #f39c12;}
-
-.checkbox-label .ball {
-  background-color: #fff;
-  width: 22px;
-  height: 22px;
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  border-radius: 50%;
-  transition: transform 0.2s linear;
-}
-
-.checkbox:checked + .checkbox-label .ball {
-  transform: translateX(24px);
-}
-
-
-
-</style>
+    <title> Settings</title>
+    <style>
+        a:link {
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        a:visited {
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: rgb(255, 255, 255);
+            background-color: transparent;
+        }
+        
+        .button {
+            background-color: white;
+            color: black;
+            border: 2px solid #059b8c;
+            padding: 15px 32px;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            opacity: 0.7;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            background-color: rgb(103, 21, 117);
+            color: #ffffff;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            opacity: 1;
+        }
+        
+        body {
+            background-image: url("bg1.jpg");
+            background-size: 1550px 1300px;
+            background-color: rgb(163, 179, 180);
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            transition: background 0.2s linear;
+        }
+        
+        body.dark {
+            background-color: #292c35;
+        }
+        
+        body.dark h1,
+        body.dark .support a {
+            color: #fff;
+        }
+        
+        .checkbox {
+            opacity: 0;
+        }
+        
+        .checkbox-label {
+            background-color: #111;
+            width: 40px;
+            height: 18px;
+            border-radius: 50px;
+            position: relative;
+            padding: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .fa-moon {
+            color: #f1c40f;
+        }
+        
+        .fa-sun {
+            color: #f39c12;
+        }
+        
+        .checkbox-label .ball {
+            background-color: #fff;
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            border-radius: 50%;
+            transition: transform 0.2s linear;
+        }
+        
+        .checkbox:checked+.checkbox-label .ball {
+            transform: translateX(24px);
+        }
+    </style>
 </head>
-<body >
-  <center> 
-<font size="7" color="#eeeeee"> FROW </font>
-<hr>
-     <font size="5">
-    <button class="button button1"><a href="/Homepage.html">Homepage</a></button>
-    <button class="button button2"><a href="/explore.html">Explore</a></button>
-    <button class="button button3"><a href="/freelancers.html?">Top Freelancers</a></button>
-    <button class="button button4"><a href="/jobs.html">Top Jobs</a></button>
-    <button class="button button5"><a href="/log.html">LogIn/SignUp</a></button>
-    <button class="button button6"><a href="/saved.html">Saved</a></button>
-    <button class="button button7"><a href="/dashboard.html">Dashboard</a></button>
-    <button class="button button8"><a href="/settings.html">Settings</a></button>
-    <button class="button button9"><a href="/info.html">AboutUs</a></button>
-    <button class="button button10"><a href="/help.html">Help/FAQs</a></button> 
-</font><hr>
-</center>
-<br><br>
-<font size="7"> Change Theme</font><br>
-<div>
-  <input type="checkbox" class="checkbox" id="checkbox">
-  <label for="checkbox" class="checkbox-label">
+
+<body>
+    <center>
+        <font size="7" color="#eeeeee"> FROW </font>
+        <hr>
+        <font size="5">
+            <button class="button button1"><a href="/Homepage.html">Homepage</a></button>
+            <button class="button button2"><a href="/explore.html">Explore</a></button>
+            <button class="button button3"><a href="/freelancers.html?">Top Freelancers</a></button>
+            <button class="button button4"><a href="/jobs.html">Top Jobs</a></button>
+            <button class="button button5"><a href="/log.html">LogIn/SignUp</a></button>
+            <button class="button button6"><a href="/saved.html">Saved</a></button>
+            <button class="button button7"><a href="/dashboard.html">Dashboard</a></button>
+            <button class="button button8"><a href="/settings.html">Settings</a></button>
+            <button class="button button9"><a href="/info.html">AboutUs</a></button>
+            <button class="button button10"><a href="/help.html">Help/FAQs</a></button>
+        </font>
+        <hr>
+    </center>
+    <br><br>
+    <font size="7"> Change Theme</font><br>
+    <div>
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbox-label">
     <i class="fas fa-moon"></i>
     <i class="fas fa-sun"></i>
     <span class="ball"></span>
   </label>
-</div>
+    </div>
 
-<br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br>
-<small><center>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <small><center>
 <font> Explore new oppurtunities, build your skills <br> Grow Your Experience </font><hr>
 <font> copyright@1234 | </font>
 <font> contact us | </font>
 <font> help/FAQ </font>
 </center></small>
 </body>
+
 </html>

@@ -1,142 +1,186 @@
 <html>
+
 <head>
-<title> Saved</title>
-<style>
-a:link {
-  color: rgb(0, 0, 0);
-  background-color: transparent;
-  text-decoration: none;
-}
-a:visited {
-  color: rgb(0, 0, 0);
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  color: rgb(255, 255, 255);
-  background-color: transparent;
-}
-
-.button {
-  background-color: white;
-  color: black;
-  border: 2px solid #059b8c;
-  padding: 15px 32px;
-  border-radius: 4px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  opacity: 0.7;
-  font-size: 12px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-.button:hover{
-    background-color: rgb(103, 21, 117);
-    color: #ffffff ;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    opacity: 1;
-}
- .gallery  {
-  --s: 280px; /* control the size */
-
-  display: grid;
-  width: var(--s);
-  aspect-ratio: 1;
-  padding: calc(var(--s) / 20); 
-  border-radius: 50%;
-}
-.gallery > img {
-  grid-area: 1 / 1;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: inherit;
-}
-.gallery > img {
-  
-  animation: m 8s infinite linear;
-  transform-origin: 50% 120.7%;
-}
-
-@keyframes m {
-  100% { transform: rotate(-360deg); }
-}
-.gallery > img:nth-child(2) { animation-delay: -2s; } /* -1 * 8s / 4 */
-.gallery > img:nth-child(3) { animation-delay: -4s; } /* -2 * 8s / 4 */
-.gallery > img:nth-child(4) { animation-delay: -6s; } /* -3 * 8s / 4 */
-@keyframes m {
-  0%, 3% { transform: rotate(0); }
-  22%, 27% { transform: rotate(-90deg); }
-  47%, 52% { transform: rotate(-180deg); }
-  72%, 77% { transform: rotate(-270deg); }
-  98%, 100% {transform: rotate(-360deg); }
-}
-.gallery {
-  padding: calc(var(--s) / 20); /* the padding is needed here */
-  position: relative;
-}
-.gallery::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: inherit; /* Inherits the same padding */
-  border-radius: 50%;
-  background: repeating-conic-gradient(#a9f0fe 0 30deg, #000000 0 60deg);
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-}
-.gallery::after,
-.gallery >img {
-  animation: m 8s infinite cubic-bezier(.5, -0.2, .5, 1.2);
-}
-.content{
-
-  font-family:fantasy ;
-  font-size: 120px;
-  text-align: right;
-}
-body {
- background-image: url("bg1.jpg");
- background-size: 1350px 1300px;
- background-color: rgb(163, 179, 180);
-}
-</style>
+    <title> Saved</title>
+    <style>
+        a:link {
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        a:visited {
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: rgb(255, 255, 255);
+            background-color: transparent;
+        }
+        
+        .button {
+            background-color: white;
+            color: black;
+            border: 2px solid #059b8c;
+            padding: 15px 32px;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            opacity: 0.7;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            background-color: rgb(103, 21, 117);
+            color: #ffffff;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            opacity: 1;
+        }
+        
+        .gallery {
+            --s: 280px;
+            /* control the size */
+            display: grid;
+            width: var(--s);
+            aspect-ratio: 1;
+            padding: calc(var(--s) / 20);
+            border-radius: 50%;
+        }
+        
+        .gallery>img {
+            grid-area: 1 / 1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+        }
+        
+        .gallery>img {
+            animation: m 8s infinite linear;
+            transform-origin: 50% 120.7%;
+        }
+        
+        @keyframes m {
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+        
+        .gallery>img:nth-child(2) {
+            animation-delay: -2s;
+        }
+        /* -1 * 8s / 4 */
+        
+        .gallery>img:nth-child(3) {
+            animation-delay: -4s;
+        }
+        /* -2 * 8s / 4 */
+        
+        .gallery>img:nth-child(4) {
+            animation-delay: -6s;
+        }
+        /* -3 * 8s / 4 */
+        
+        @keyframes m {
+            0%,
+            3% {
+                transform: rotate(0);
+            }
+            22%,
+            27% {
+                transform: rotate(-90deg);
+            }
+            47%,
+            52% {
+                transform: rotate(-180deg);
+            }
+            72%,
+            77% {
+                transform: rotate(-270deg);
+            }
+            98%,
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+        
+        .gallery {
+            padding: calc(var(--s) / 20);
+            /* the padding is needed here */
+            position: relative;
+        }
+        
+        .gallery::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            padding: inherit;
+            /* Inherits the same padding */
+            border-radius: 50%;
+            background: repeating-conic-gradient(#a9f0fe 0 30deg, #000000 0 60deg);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+        }
+        
+        .gallery::after,
+        .gallery>img {
+            animation: m 8s infinite cubic-bezier(.5, -0.2, .5, 1.2);
+        }
+        
+        .content {
+            font-family: fantasy;
+            font-size: 120px;
+            text-align: right;
+        }
+        
+        body {
+            background-image: url("bg1.jpg");
+            background-size: 1550px 1300px;
+            background-color: rgb(163, 179, 180);
+        }
+    </style>
 </head>
-<body >
-  <center>
-<font size="7" color="#eeeeee">FROW</font>
-<hr>
-     <font size="5">
-    <button class="button button1"><a href="/Homepage.html">Homepage</a></button>
-    <button class="button button2"><a href="/explore.html">Explore</a></button>
-    <button class="button button3"><a href="/freelancers.html?">Top Freelancers</a></button>
-    <button class="button button4"><a href="/jobs.html">Top Jobs</a></button>
-    <button class="button button5"><a href="/log.html">LogIn/SignUp</a></button>
-    <button class="button button6"><a href="/saved.html">Saved</a></button>
-    <button class="button button7"><a href="/dashboard.html">Dashboard</a></button>
-    <button class="button button8"><a href="/settings.html">Settings</a></button>
-    <button class="button button9"><a href="/info.html">AboutUs</a></button>
-    <button class="button button10"><a href="/help.html">Help/FAQs</a></button> 
-</font></center><hr>
 
-<div class="gallery">
-  <img src="img1.jpg" alt="1">
-  <img src="img2.jpg" alt="2">
-  <img src="img3.jpg" alt="3">
-  <img src="logIn.png" alt="4">
-</div>
-<div class="content">
-  Here are<br>saved ppl/jobs
-</div>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<small><center>
+<body>
+    <center>
+        <font size="7" color="#eeeeee">FROW</font>
+        <hr>
+        <font size="5">
+            <button class="button button1"><a href="/Homepage.html">Homepage</a></button>
+            <button class="button button2"><a href="/explore.html">Explore</a></button>
+            <button class="button button3"><a href="/freelancers.html?">Top Freelancers</a></button>
+            <button class="button button4"><a href="/jobs.html">Top Jobs</a></button>
+            <button class="button button5"><a href="/log.html">LogIn/SignUp</a></button>
+            <button class="button button6"><a href="/saved.html">Saved</a></button>
+            <button class="button button7"><a href="/dashboard.html">Dashboard</a></button>
+            <button class="button button8"><a href="/settings.html">Settings</a></button>
+            <button class="button button9"><a href="/info.html">AboutUs</a></button>
+            <button class="button button10"><a href="/help.html">Help/FAQs</a></button>
+        </font>
+    </center>
+    <hr>
+
+    <div class="gallery">
+        <img src="img1.jpg" alt="1">
+        <img src="img2.jpg" alt="2">
+        <img src="img3.jpg" alt="3">
+        <img src="logIn.png" alt="4">
+    </div>
+    <div class="content">
+        Here are<br>saved ppl/jobs
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <small><center>
 <font> Explore new oppurtunities, build your skills <br> Grow Your Experience </font><hr>
 <font> copyright@1234 | </font>
 <font> contact us | </font>
 <font> help/FAQ </font>
 </center></small>
 </body>
+
 </html>

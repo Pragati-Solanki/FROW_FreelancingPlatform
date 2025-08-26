@@ -1,208 +1,240 @@
 <html>
+
 <head>
-<title> Login</title>
-<style>
-a:link {
-  color: rgb(0, 0, 0);
-  background-color: transparent;
-  text-decoration: none;
-}
-a:visited {
-  color: rgb(0, 0, 0);
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  color: rgb(255, 255, 255);
-  background-color: transparent;
-}
-.button {
-  background-color: white;
-  color: black;
-  border: 2px solid #059b8c;
-  padding: 15px 32px;
-  border-radius: 4px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  opacity: 0.7;
-  font-size: 12px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-.button:hover{
-    background-color: rgb(103, 21, 117);
-    color: #ffffff ;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    opacity: 1;
-}
-body
-{
- background-image: url("bg1.jpg");
- background-size: 1350px 1300px;
- background-color: rgb(163, 179, 180);
-}
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-}
-.table{
-  -moz-box-align: center;
-}
-
-/* Full-width input fields */
-  input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-.signupbtn{
-  background-color: #89a19f;
-}
-
-</style>
+    <title> Login</title>
+    <style>
+        a:link {
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        a:visited {
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: rgb(255, 255, 255);
+            background-color: transparent;
+        }
+        
+        .button {
+            background-color: white;
+            color: black;
+            border: 2px solid #059b8c;
+            padding: 15px 32px;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            opacity: 0.7;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            background-color: rgb(103, 21, 117);
+            color: #ffffff;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            opacity: 1;
+        }
+        
+        body {
+            background-image: url("bg1.jpg");
+            background-size: 1550px 1300px;
+            background-color: rgb(163, 179, 180);
+        }
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+        
+        .table {
+            -moz-box-align: center;
+        }
+        /* Full-width input fields */
+        
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+        
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .signupbtn {
+            background-color: #89a19f;
+        }
+    </style>
 
 </head>
+
 <body>
-<center>
-<font size="7" color="#eeeeee">FROW</font>
-<hr>
+    <center>
+        <font size="7" color="#eeeeee">FROW</font>
+        <hr>
 
-     <font size="5">
-    <button class="button button1"><a href="/Homepage.html">Homepage</a></button>
-    <button class="button button2"><a href="/explore.html">Explore</a></button>
-    <button class="button button3"><a href="/freelancers.html?">Top Freelancers</a></button>
-    <button class="button button4"><a href="/jobs.html">Top Jobs</a></button>
-    <button class="button button5"><a href="/log.html">LogIn/SignUp</a></button>
-    <button class="button button6"><a href="/saved.html">Saved</a></button>
-    <button class="button button7"><a href="/dashboard.html">Dashboard</a></button>
-    <button class="button button8"><a href="/settings.html">Settings</a></button>
-    <button class="button button9"><a href="/info.html">AboutUs</a></button>
-    <button class="button button10"><a href="/help.html">Help/FAQs</a></button> 
-</font></center><hr>
-<br><br><br><br>
-<center>
-<table>
-<tr>
-<td>
-  <div class="card">
-  <img src="img1.jpg" alt="USER" style="width:100%">
-  <h1>LogIn</h1>
-  <p class="title">Our User</p><br><br><br>
+        <font size="5">
+            <button class="button button1"><a href="/Homepage.html">Homepage</a></button>
+            <button class="button button2"><a href="/explore.html">Explore</a></button>
+            <button class="button button3"><a href="/freelancers.html?">Top Freelancers</a></button>
+            <button class="button button4"><a href="/jobs.html">Top Jobs</a></button>
+            <button class="button button5"><a href="/log.html">LogIn/SignUp</a></button>
+            <button class="button button6"><a href="/saved.html">Saved</a></button>
+            <button class="button button7"><a href="/dashboard.html">Dashboard</a></button>
+            <button class="button button8"><a href="/settings.html">Settings</a></button>
+            <button class="button button9"><a href="/info.html">AboutUs</a></button>
+            <button class="button button10"><a href="/help.html">Help/FAQs</a></button>
+        </font>
+    </center>
+    <hr>
+    <br><br><br><br>
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <div class="card">
+                        <img src="img1.jpg" alt="USER" style="width:100%">
+                        <h1>LogIn</h1>
+                        <p class="title">Our User</p><br><br><br>
 
-  <div class="Log_In">
-  <form class="login" onsubmit="validateSignupForm(event)">
-  <label>Username:</label><br>
-  <input type="text" placeholder="Username" name="username" required><br>
-  <label>Email:</label><br>
-  <input type="text" placeholder="Email" name="email" required><br>
-  <label>Password:</label><br>
-  <input type="text" placeholder="Password" name="pswd" required><br><br>
-  <div class="clearfix">
-      <button type="submit" class="signupbtn">Log In</button>
-    </div>
-  <br><br><br>
-  </form>
-  </div>
+                        <div class="Log_In">
+                            <form class="login" onsubmit="validateSignupForm(event)">
+                                <label>Username:</label><br>
+                                <input type="text" placeholder="Username" name="username" required><br>
+                                <label>Email:</label><br>
+                                <input type="text" placeholder="Email" name="email" required><br>
+                                <label>Password:</label><br>
+                                <input type="text" placeholder="Password" name="pswd" required><br><br>
+                                <div class="clearfix">
+                                    <button type="submit" class="signupbtn">Log In</button>
+                                </div>
+                                <br><br><br>
+                            </form>
+                        </div>
 
-  </div>
-</td>
-  <br>
-  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-  <br>
-<td>
-<div class="card">
-  <img src="img1.jpg" alt="USER" style="width:100%">
-  <h1>SignUp</h1>
-  <p class="title">New User</p><br>
-  <div class="Sign_Up">
-  <form class="sign" onsubmit="validateSignupForm(event)">
-  <label for="Username">Username:</label><br>
-  <input type="text" placeholder="Username" name="username" required><br>
-  <label>Email:</label><br>
-  <input type="text" placeholder="Email" name="email" required><br>
-  <label>Password:</label><br>
-  <input type="text" placeholder="Password" name="pswd" required><br>
-  <label>Confirm Password:</label><br>
-  <input type="text" placeholder="ConfirmPassword" name="pswd-re" required><br>
-  <div class="clearfix">
-      <button type="submit" class="signupbtn">Sign Up</button><br><br>
-    </div>
-  </form>
-  </div>
-</div>
-</td>
-</tr>
-</table>
-</center>
-<br><br><br><br>
+                    </div>
+                </td>
+                <br>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <br>
+                <td>
+                    <div class="card">
+                        <img src="img1.jpg" alt="USER" style="width:100%">
+                        <h1>SignUp</h1>
+                        <p class="title">New User</p><br>
+                        <div class="Sign_Up">
+                            <form class="sign" onsubmit="validateSignupForm(event)">
+                                <label for="Username">Username:</label><br>
+                                <input type="text" placeholder="Username" name="username" required><br>
+                                <label>Email:</label><br>
+                                <input type="text" placeholder="Email" name="email" required><br>
+                                <label>Password:</label><br>
+                                <input type="text" placeholder="Password" name="pswd" required><br>
+                                <label>Confirm Password:</label><br>
+                                <input type="text" placeholder="ConfirmPassword" name="pswd-re" required><br>
+                                <div class="clearfix">
+                                    <button type="submit" class="signupbtn">Sign Up</button><br><br>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <br><br><br><br>
 
-<hr>
-<small><center>
+    <hr>
+    <small><center>
 <font> copyright@1234 | </font>
 <font> contact us | </font>
 <font> help/FAQ </font>
 </center></small>
 
-<script>
-function validateSignupForm(event) 
-{
-  event.preventDefault(); // Prevent form submission for validation
+    <script>
+        function validateSignupForm(event) {
+            event.preventDefault(); // Prevent form submission for validation
 
-  const form = document.querySelector('.sign');
-  const username = form.username.value.trim();
-  const email = form.email.value.trim();
-  const password = form.pswd.value;
-  const confirmPassword = form["pswd-re"].value;
+            const form = document.querySelector('.sign');
+            const username = form.username.value.trim();
+            const email = form.email.value.trim();
+            const password = form.pswd.value;
+            const confirmPassword = form["pswd-re"].value;
 
-  // regular expressions 
-  const nameRegex = /^[A-Za-z ]+$/;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
-  
-   if (!nameRegex.test(username)) {
-    alert("Username should contain only letters and spaces.");
-    return false;
-  }
+            // regular expressions 
+            const nameRegex = /^[A-Za-z ]+$/;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
 
-  if (!emailRegex.test(email)) {
-    alert("Please enter a valid email address.");
-    return false;
-  }
+            if (!nameRegex.test(username)) {
+                alert("Username should contain only letters and spaces.");
+                return false;
+            }
 
-  if (!passwordRegex.test(password)) {
-    alert("Password must be at least 6 characters long and contain at least one letter and one number.");
-    return false;
-  }
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
 
-  if (password !== confirmPassword) {
-    alert("Passwords do not match.");
-    return false;
-  }
+            if (!passwordRegex.test(password)) {
+                alert("Password must be at least 6 characters long and contain at least one letter and one number.");
+                return false;
+            }
 
-  alert("Registration successful!");
-  form.submit(); // Submit if all validations pass
-}
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
 
-</script>
+            alert("Registration successful!");
+            form.submit(); // Submit if all validations pass
+        }
+    </script>
 </body>
+
 </html>
