@@ -167,22 +167,28 @@
                         <img src="img1.jpg" alt="USER" style="width:100%">
                         <h1>SignUp</h1>
                         <p class="title">New User</p><br>
+
                         <div class="Sign_Up">
-                            <form class="sign" onsubmit="validateSignupForm(event)">
+                            <form class="sign" action="signup.php" method="post">
                                 <label for="Username">Username:</label><br>
                                 <input type="text" placeholder="Username" name="username" required><br>
+
                                 <label>Email:</label><br>
-                                <input type="text" placeholder="Email" name="email" required><br>
+                                <input type="email" placeholder="Email" name="email" required><br>
+
                                 <label>Password:</label><br>
-                                <input type="text" placeholder="Password" name="pswd" required><br>
+                                <input type="password" placeholder="Password" name="pswd" required><br>
+
                                 <label>Confirm Password:</label><br>
-                                <input type="text" placeholder="ConfirmPassword" name="pswd-re" required><br>
+                                <input type="password" placeholder="Confirm Password" name="pswd_re" required><br>
+
                                 <div class="clearfix">
                                     <button type="submit" class="signupbtn">Sign Up</button><br><br>
                                 </div>
                             </form>
                         </div>
                     </div>
+
                 </td>
             </tr>
         </table>
