@@ -1,116 +1,122 @@
 <html>
+
 <head>
-<title> Dashboard</title>
-<style>
-    
-a:link {
-  color: rgb(0, 0, 0);
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: rgb(0, 0, 0);
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  color: rgb(255, 255, 255);
-  background-color: transparent;
-}
-
-.button {
-  background-color: white;
-  color: black;
-  border: 2px solid #059b8c;
-  padding: 15px 32px;
-  border-radius: 4px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  opacity: 0.7;
-  font-size: 12px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-.button:hover{
-    background-color: rgb(103, 21, 117);
-    color: #ffffff ;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    opacity: 1;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-}
-
-.title {
-  color: grey;
-  font-size: 18px;
-}
-
-.user {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-.user:hover{
-  opacity:0.7;
-}
-body {
- background-image: url("bg1.jpg");
- background-size: 1350px 1300px;
- background-color: rgb(163, 179, 180);
-}
-
-</style>
+    <title> Dashboard</title>
+    <style>
+        a:link {
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        a:visited {
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: rgb(255, 255, 255);
+            background-color: transparent;
+        }
+        
+        .button {
+            background-color: white;
+            color: black;
+            border: 2px solid #059b8c;
+            padding: 15px 32px;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            opacity: 0.7;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            background-color: rgb(103, 21, 117);
+            color: #ffffff;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            opacity: 1;
+        }
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+        
+        .title {
+            color: grey;
+            font-size: 18px;
+        }
+        
+        .user {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+        
+        .user:hover {
+            opacity: 0.7;
+        }
+        
+        body {
+            background-image: url("bg1.jpg");
+            background-size: 1550px 1300px;
+            background-color: rgb(163, 179, 180);
+        }
+    </style>
 </head>
 <center>
-<body >
-<font size="7" color="#eeeeee" > FROW </font>
+
+    <body>
+        <font size="7" color="#eeeeee"> FROW </font>
+        <hr>
+
+        <font size="5">
+            <button class="button button1"><a href="/Homepage.html">Homepage</a></button>
+            <button class="button button2"><a href="/explore.html">Explore</a></button>
+            <button class="button button3"><a href="/freelancers.html?">Top Freelancers</a></button>
+            <button class="button button4"><a href="/jobs.html">Top Jobs</a></button>
+            <button class="button button5"><a href="/log.html">LogIn/SignUp</a></button>
+            <button class="button button6"><a href="/saved.html">Saved</a></button>
+            <button class="button button7"><a href="/dashboard.html">Dashboard</a></button>
+            <button class="button button8"><a href="/settings.html">Settings</a></button>
+            <button class="button button9"><a href="/info.html">AboutUs</a></button>
+            <button class="button button10"><a href="/help.html">Help/FAQs</a></button>
+        </font>
+</center>
 <hr>
+<br><br><br><br>
+<center>
+    <h2 style="text-align:center">User Profile Card</h2>
+    <div class="card">
+        <img src="img1.jpg" alt="USER" style="width:100%">
+        <h1>Your Name</h1>
+        <p class="title">Working on Freelancing website</p>
+        <p>Frow user</p><br><br>
+        <p><button class="user">Progress Board</button></p>
+    </div>
 
-     <font size="5">
-    <button class="button button1"><a href="/Homepage.html">Homepage</a></button>
-    <button class="button button2"><a href="/explore.html">Explore</a></button>
-    <button class="button button3"><a href="/freelancers.html?">Top Freelancers</a></button>
-    <button class="button button4"><a href="/jobs.html">Top Jobs</a></button>
-    <button class="button button5"><a href="/log.html">LogIn/SignUp</a></button>
-    <button class="button button6"><a href="/saved.html">Saved</a></button>
-    <button class="button button7"><a href="/dashboard.html">Dashboard</a></button>
-    <button class="button button8"><a href="/settings.html">Settings</a></button>
-    <button class="button button9"><a href="/info.html">AboutUs</a></button>
-    <button class="button button10"><a href="/help.html">Help/FAQs</a></button> 
-</font>
-</center><hr>
-<br><br><br><br><center>
-  <h2 style="text-align:center">User Profile Card</h2>
-<div class="card">
-  <img src="img1.jpg" alt="USER" style="width:100%">
-  <h1>Your Name</h1>
-  <p class="title">Working on Freelancing website</p>
-  <p>Frow user</p><br><br>
-  <p><button class="user">Progress Board</button></p>
-</div>
-
-<br><br><br><br><br><br><br>
-<small><center>
+    <br><br><br><br><br><br><br>
+    <small><center>
 <font> Explore new oppurtunities, build your skills <br> Grow Your Experience </font><hr>
 <font> copyright@1234 | </font>
 <font> contact us | </font>
 <font> help/FAQ </font>
 </center></small>
-</body>
+    </body>
+
 </html>

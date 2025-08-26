@@ -1,154 +1,166 @@
 <html>
+
 <head>
-<title> EXPLORE </title>
-<style>
-  
-a:link {
-  color: rgb(0, 0, 0);
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: rgb(0, 0, 0);
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  color: rgb(255, 255, 255);
-  background-color: transparent;
-}
-
-.button {
-  background-color: white;
-  color: black;
-  border: 2px solid #059b8c;
-  padding: 15px 32px;
-  border-radius: 4px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  opacity: 0.7;
-  font-size: 12px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-.button:hover{
-    background-color: rgb(103, 21, 117);
-    color: #ffffff ;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    opacity: 1;
-}
-.button11{
-  background-color:#1d5d9e;
-  color: #fafafa;
-  border: 2px solid #060370;
-  padding: 20px 90px;
-  border-radius: 12px;
-  text-align: center;
-  text-decoration:double;
-  display: inline-block;
-  opacity: 1;
-  font-size: 18px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-body {
- background-image: url("bg1.jpg");
- background-size: 1350px 1300px;
- background-color: rgb(163, 179, 180);
-}
-
-/* Slider styles */
-    #slider {
-      width: 300px;
-      height: 200px;
-      overflow: hidden;
-      position: relative;
-      margin-top: 20px;
-    }
-
-    .slide {
-      width: 100%;
-      height: 100%;
-      display: none;
-    }
-
-    #slider button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0,0,0,0.5);
-      color: white;
-      border:#fafafa;
-      font-size: 20px;
-      padding: 8px 12px;
-      cursor: pointer;
-    }
-
-    #prev { left: 0; }
-    #next { right: 0; }
-
-</style>
+    <title> EXPLORE </title>
+    <style>
+        a:link {
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        a:visited {
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: rgb(255, 255, 255);
+            background-color: transparent;
+        }
+        
+        .button {
+            background-color: white;
+            color: black;
+            border: 2px solid #059b8c;
+            padding: 15px 32px;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            opacity: 0.7;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            background-color: rgb(103, 21, 117);
+            color: #ffffff;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            opacity: 1;
+        }
+        
+        .button11 {
+            background-color: #1d5d9e;
+            color: #fafafa;
+            border: 2px solid #060370;
+            padding: 20px 90px;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: double;
+            display: inline-block;
+            opacity: 1;
+            font-size: 18px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        
+        body {
+            background-image: url("bg1.jpg");
+            background-size: 1550px 1300px;
+            background-color: rgb(163, 179, 180);
+        }
+        /* Slider styles */
+        
+        #slider {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            margin-top: 20px;
+        }
+        
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+        
+        #slider button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: #fafafa;
+            font-size: 20px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+        
+        #prev {
+            left: 0;
+        }
+        
+        #next {
+            right: 0;
+        }
+    </style>
 </head>
-<body >
-  <center>
-<font size="7" color="#eeeeee">FROW</font>
-<hr>
 
-     <font size="5">
-    <button class="button button1"><a href="/Homepage.html">Homepage</a></button>
-    <button class="button button2"><a href="/explore.html">Explore</a></button>
-    <button class="button button3"><a href="/freelancers.html?">Top Freelancers</a></button>
-    <button class="button button4"><a href="/jobs.html">Top Jobs</a></button>
-    <button class="button button5"><a href="/log.html">LogIn/SignUp</a></button>
-    <button class="button button6"><a href="/saved.html">Saved</a></button>
-    <button class="button button7"><a href="/dashboard.html">Dashboard</a></button>
-    <button class="button button8"><a href="/settings.html">Settings</a></button>
-    <button class="button button9"><a href="/info.html">AboutUs</a></button>
-    <button class="button button10"><a href="/help.html">Help/FAQs</a></button> 
-     </font></center><hr>
-     
-<button class="but button11">Look for Top Freelancerss</button><br><br>
+<body>
+    <center>
+        <font size="7" color="#eeeeee">FROW</font>
+        <hr>
 
- <div id="slider">
-    <img src="p1.jpg" class="slide" style="display:block;">
-    <img src="p2.jpg" class="slide">
-    <img src="p3.jpg" class="slide">
-    <button id="prev"> <| </button>
-    <button id="next"> |> </button>
-  </div>
-<br><br>
-<button class="but button11">Look for Top Jobs</button><br>
-<br><br><br><br><br><br><br><br>
-<br><br><br>
-<small><center>
+        <font size="5">
+            <button class="button button1"><a href="/Homepage.html">Homepage</a></button>
+            <button class="button button2"><a href="/explore.html">Explore</a></button>
+            <button class="button button3"><a href="/freelancers.html?">Top Freelancers</a></button>
+            <button class="button button4"><a href="/jobs.html">Top Jobs</a></button>
+            <button class="button button5"><a href="/log.html">LogIn/SignUp</a></button>
+            <button class="button button6"><a href="/saved.html">Saved</a></button>
+            <button class="button button7"><a href="/dashboard.html">Dashboard</a></button>
+            <button class="button button8"><a href="/settings.html">Settings</a></button>
+            <button class="button button9"><a href="/info.html">AboutUs</a></button>
+            <button class="button button10"><a href="/help.html">Help/FAQs</a></button>
+        </font>
+    </center>
+    <hr>
+
+    <button class="but button11">Look for Top Freelancerss</button><br><br>
+
+    <div id="slider">
+        <img src="p1.jpg" class="slide" style="display:block;">
+        <img src="p2.jpg" class="slide">
+        <img src="p3.jpg" class="slide">
+        <button id="prev"> <| </button>
+        <button id="next"> |> </button>
+    </div>
+    <br><br>
+    <button class="but button11">Look for Top Jobs</button><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br>
+    <small><center>
 <font> Explore new oppurtunities, build your skills <br> Grow Your Experience </font><hr>
 <font> copyright@1234 | </font>
 <font> contact us | </font>
 <font> help/FAQ </font>
 </center></small>
 
-<script>
-// Slider
-    let currentSlide = 0;
-    const slides = document.querySelectorAll(".slide");
+    <script>
+        // Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.style.display = i === index ? "block" : "none";
-      });
-    }
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? "block" : "none";
+            });
+        }
 
-    document.getElementById("next").onclick = () => {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
-    };
+        document.getElementById("next").onclick = () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        };
 
-    document.getElementById("prev").onclick = () => {
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      showSlide(currentSlide);
-    };
-</script>
+        document.getElementById("prev").onclick = () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        };
+    </script>
 </body>
+
 </html>
