@@ -1,0 +1,8 @@
+Username: ABCDEF
+Email: abc@xyz.com
+Password: abcd123
+------------------------
+Username: ABCDEF
+Email: abc@xyz.com
+Password: abcd123
+------------------------

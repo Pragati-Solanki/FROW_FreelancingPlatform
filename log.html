@@ -62,7 +62,8 @@
         /* Full-width input fields */
         
         input[type=text],
-        input[type=password] {
+        input[type=password],
+        input[type=email] {
             width: 100%;
             padding: 15px;
             margin: 5px 0 22px 0;
@@ -84,7 +85,18 @@
         }
         
         .signupbtn {
-            background-color: #89a19f;
+            background-color: #21b57f;
+            color: white;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        
+        .signupbtn:hover {
+            background-color: #21e99f;
         }
     </style>
 
@@ -120,21 +132,14 @@
                         <p class="title">Our User</p><br><br><br>
 
                         <div class="Log_In">
-                            <form class="login" onsubmit="validateSignupForm(event)">
-                                <label>Username:</label><br>
-                                <input type="text" placeholder="Username" name="username" required><br>
-                                <label>Email:</label><br>
-                                <input type="text" placeholder="Email" name="email" required><br>
-                                <label>Password:</label><br>
-                                <input type="text" placeholder="Password" name="pswd" required><br><br>
-                                <div class="clearfix">
-                                    <button type="submit" class="signupbtn">Log In</button>
-                                </div>
-                                <br><br><br>
-                            </form>
-                        </div>
-
-                    </div>
+                            <div class="Log_In">
+                                <form class="login" action="signup.php" method="post">
+                                    <label>Username:</label><br> <input type="text" placeholder="Username" name="username" required><br>
+                                    <label>Email:</label><br> <input type="text" placeholder="Email" name="email" required><br>
+                                    <label>Password:</label><br>
+                                    <input type="text" placeholder="Password" name="pswd" required><br><br>
+                                    <div class="clearfix"> <button type="submit" class="signupbtn">Log In</button></div>
+                            </div>
                 </td>
                 <br>
                 <td></td>
@@ -165,22 +170,23 @@
                 <td>
                     <div class="card">
                         <img src="img1.jpg" alt="USER" style="width:100%">
-                        <h1>SignUp</h1>
+                        <h1>Sign Up</h1>
                         <p class="title">New User</p><br>
 
                         <div class="Sign_Up">
                             <form class="sign" action="signup.php" method="post">
-                                <label for="Username">Username:</label><br>
-                                <input type="text" placeholder="Username" name="username" required><br>
 
-                                <label>Email:</label><br>
-                                <input type="email" placeholder="Email" name="email" required><br>
+                                <label for="username">Username:</label><br>
+                                <input type="text" placeholder="Username" name="username" id="username" required><br>
 
-                                <label>Password:</label><br>
-                                <input type="password" placeholder="Password" name="pswd" required><br>
+                                <label for="email">Email:</label><br>
+                                <input type="email" placeholder="example@email.com" name="email" id="email" required><br>
 
-                                <label>Confirm Password:</label><br>
-                                <input type="password" placeholder="Confirm Password" name="pswd_re" required><br>
+                                <label for="pswd">Password:</label><br>
+                                <input type="password" placeholder="Password" name="pswd" id="pswd" required><br>
+
+                                <label for="pswd_re">Confirm Password:</label><br>
+                                <input type="password" placeholder="Confirm Password" name="pswd_re" id="pswd_re" required><br>
 
                                 <div class="clearfix">
                                     <button type="submit" class="signupbtn">Sign Up</button><br><br>
@@ -188,6 +194,7 @@
                             </form>
                         </div>
                     </div>
+
 
                 </td>
             </tr>
