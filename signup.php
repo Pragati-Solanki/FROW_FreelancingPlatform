@@ -1,28 +1,38 @@
 <?php
+include('db_connect.php');
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Sanitize input
     $username = htmlspecialchars(trim($_POST['username']));
-    $email = htmlspecialchars(trim($_POST['email']));
+    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
     $password = $_POST['pswd'];
     $confirmPassword = $_POST['pswd_re'];
 
-    // Password check
+    // Basic validation
+    if (!preg_match("/^[A-Za-z ]+$/", $username)) {
+        die("Username can only contain letters and spaces.");
+    }
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        die("Invalid email address.");
+    }
+    if (strlen($password) < 6 || !preg_match("/[0-9]/", $password) || !preg_match("/[A-Za-z]/", $password)) {
+        die("Password must be at least 6 chars, include letters and numbers.");
+    }
     if ($password !== $confirmPassword) {
-        echo "<h3 style='color:red;'>Passwords do not match. Please try again.</h3>";
-        exit;
+        die("Passwords do not match.");
     }
 
-    // Format data neatly
-    $data = "Username: $username" . PHP_EOL .
-            "Email: $email" . PHP_EOL .
-            "Password: $password" . PHP_EOL .
-            "------------------------" . PHP_EOL;
+    // Hash the password
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    // Save to users.txt
-    if (file_put_contents("users.txt", $data, FILE_APPEND | LOCK_EX)) {
-        echo "<h2>Registration Successful!</h2>";
-        echo "<p>Welcome, <strong>$username</strong>. Your details have been saved.</p>";
+    // Store in DB
+    $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $username, $email, $hashedPassword);
+
+    if ($stmt->execute()) {
+        echo "Registration successful!";
     } else {
-        echo "<h3 style='color:red;'>Error saving your data. Please try again.</h3>";
+        echo "Error: " . $stmt->error;
     }
 }
 ?>

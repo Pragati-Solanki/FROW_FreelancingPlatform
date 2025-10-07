@@ -1,27 +1,30 @@
 <?php
+include('db_connect.php');
 session_start();
 
-// Hardcoded username/password pairs
-$users = [
-    "alice" => "password123",
-    "bob"   => "secure456",
-    "admin" => "adminpass"
-];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = htmlspecialchars(trim($_POST['username']));
+    $password = $_POST['pswd'];
 
-$username = $_POST['username'] ?? '';
-$password = $_POST['pswd'] ?? '';
+    $stmt = $conn->prepare("SELECT password FROM users WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $stmt->store_result();
 
-if (isset($users[$username]) && $users[$username] === $password) {
-    $_SESSION['username'] = $username;
+    if ($stmt->num_rows > 0) {
+        $stmt->bind_result($hashedPassword);
+        $stmt->fetch();
 
-    // optional "remember me"
-    if (!empty($_POST['remember'])) {
-        setcookie("username", $username, time() + (7 * 24 * 60 * 60), "/");
+        if (password_verify($password, $hashedPassword)) {
+            $_SESSION['username'] = $username;
+            setcookie("username", $username, time()+3600, "/"); // optional
+            header("Location: session.php");
+            exit;
+        } else {
+            echo "Invalid username or password.";
+        }
+    } else {
+        echo "Invalid username or password.";
     }
-
-    header("Location: session.php");
-    exit;
-} else {
-    echo "Invalid username or password.";
 }
 ?>

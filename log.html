@@ -133,12 +133,14 @@
 
                         <div class="Log_In">
                             <div class="Log_In">
-                                <form class="login" action="signup.php" method="post">
-                                    <label>Username:</label><br> <input type="text" placeholder="Username" name="username" required><br>
-                                    <label>Email:</label><br> <input type="text" placeholder="Email" name="email" required><br>
+                                <form class="login" action="login.php" method="post">
+                                    <label>Username:</label><br>
+                                    <input type="text" placeholder="Username" name="username" required><br>
                                     <label>Password:</label><br>
-                                    <input type="text" placeholder="Password" name="pswd" required><br><br>
-                                    <div class="clearfix"> <button type="submit" class="signupbtn">Log In</button></div>
+                                    <input type="password" placeholder="Password" name="pswd" required><br>
+                                    <button type="submit" class="signupbtn">Log In</button>
+                                </form>
+
                             </div>
                 </td>
                 <br>
@@ -173,28 +175,26 @@
                         <h1>Sign Up</h1>
                         <p class="title">New User</p><br>
 
+
                         <div class="Sign_Up">
                             <form class="sign" action="signup.php" method="post">
-
                                 <label for="username">Username:</label><br>
-                                <input type="text" placeholder="Username" name="username" id="username" required><br>
+                                <input type="text" placeholder="Username" name="username" required><br>
 
                                 <label for="email">Email:</label><br>
-                                <input type="email" placeholder="example@email.com" name="email" id="email" required><br>
+                                <input type="email" placeholder="example@email.com" name="email" required><br>
 
                                 <label for="pswd">Password:</label><br>
-                                <input type="password" placeholder="Password" name="pswd" id="pswd" required><br>
+                                <input type="password" placeholder="Password" name="pswd" required><br>
 
                                 <label for="pswd_re">Confirm Password:</label><br>
-                                <input type="password" placeholder="Confirm Password" name="pswd_re" id="pswd_re" required><br>
+                                <input type="password" placeholder="Confirm Password" name="pswd_re" required><br>
 
-                                <div class="clearfix">
-                                    <button type="submit" class="signupbtn">Sign Up</button><br><br>
-                                </div>
+                                <button type="submit" class="signupbtn">Sign Up</button>
                             </form>
+
                         </div>
                     </div>
-
 
                 </td>
             </tr>

@@ -1,8 +1,12 @@
-Username: ABCDEF
+alice,password123,alice@email.com
+bob,secure456,bob@email.com
+ABCDEF,abcd1234,abc@xyz.comABCDEFG,abcd123,abcd@xyz.com
+ABCDEFG,abcd123,abc@xyz.com
+ABCDEFGH,abcd123,abc@xyz.com
+Username: New
 Email: abc@xyz.com
 Password: abcd123
 ------------------------
-Username: ABCDEF
-Email: abc@xyz.com
-Password: abcd123
-------------------------
+ABCDEF,abcd123,abc@xyz.com
+24DCS127,abcd123,abc@xyz.com
+24DCS127,abcd123,abc@xyz.com
